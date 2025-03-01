@@ -1,0 +1,103 @@
+import { StyleSheet, Text, View } from "react-native";
+import { Avatar, Icon, Image } from "@rneui/base";
+
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <View style={{ flexDirection: "row" }}>
+        <Avatar
+          size={64}
+          rounded
+          source={{ uri: "https://placehold.co/64x64/png" }}
+          containerStyle={styles.avatar}
+        />
+
+        <Avatar
+          size={64}
+          rounded
+          source={{ uri: "https://placehold.co/64x64/png" }}
+          containerStyle={styles.avatar}
+        />
+
+        <Avatar
+          size={64}
+          rounded
+          source={{ uri: "https://placehold.co/64x64/png" }}
+          containerStyle={styles.avatar}
+        />
+
+        <Avatar
+          size={64}
+          rounded
+          source={{ uri: "https://placehold.co/64x64/png" }}
+          containerStyle={styles.avatar}
+        />
+      </View>
+
+      <View style={{flexDirection: "row", justifyContent: "space-between",margin: 16}}>
+        <View style={{ flexDirection: "row" }}>
+          <Avatar
+            size={32}
+            rounded
+            source={{ uri: "https://placehold.co/64x64/png" }}
+          />
+          <View style={{ flexDirection: "column", marginLeft: 8 }}>
+            <Text style={styles.username}>Angel G</Text>
+            <Text style={styles.addres}>San Francisco</Text>
+          </View>
+        </View>
+        <Icon type="material-community" name="dots-vertical" size={16} />
+      </View>
+
+      <Image
+        source={{ uri: "https://placehold.co/600x300/png" }}
+        style={{ height: 300, width: "100%" }}
+      />
+
+      <View style={{ flexDirection: "row", justifyContent: "space-between", margin: 10 }}>
+        <View style={{ flexDirection: "row" }}>
+          <Icon type="material-community" name="heart" size={24} color="red" />
+          <Icon type="material-community" name="chat-outline" size={24} style={{marginHorizontal:16}} />
+          <Icon type="material-community" name="share-outline" size={24} />
+        </View>
+        <Icon type="material-community" name="dots-horizontal" size={24} />
+        <Icon type="material-community" name="bookmark-outline" size={24} />
+      </View>
+
+      <View style={{ flexDirection: "row", marginHorizontal: 16}}>
+        <Avatar
+        size={24}
+        source={{ uri: "https://placehold.co/32x32/png" }}
+        rounded/>
+        <View style={{justifyContent:"center", marginLeft:8}}>
+        <Text>Liked by Angel G and 10 others</Text>
+        </View>
+      </View>
+
+      <View style={{ marginHorizontal: 16}}>
+      <Text style={{marginTop: 8, fontSize: 14, fontWeight: "bold" }}>Angel G</Text>
+      <Text style={{ fontSize: 14 }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id ligula ac justo ultrices ultricies. Nullam nec nunc nec nunc.</Text>
+      <Text style={{ fontSize: 14, color: "gray" }}>View all 10 comments</Text>
+      </View>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1, //Sirve para abarcar toda la pantalla
+    backgroundColor: "#fff",
+    marginTop: 48,
+  },
+  avatar: {
+    marginHorizontal: 8,
+  },
+  username: {
+    fontSize: 14,
+    fontWeight: "bold",
+  },
+  addres: {
+    fontSize: 12,
+    color: "gray",
+  },
+});
