@@ -16,7 +16,7 @@ export default function HomeStack() {
             />
             <Stack.Screen
                 name="HouseDetail"
-                component={Home}
+                component={HouseDetail}
                 options={{ title: "HouseDetail" }}
             />
         </Stack.Navigator>

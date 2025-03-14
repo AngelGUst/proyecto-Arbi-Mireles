@@ -31,13 +31,13 @@ export default function Home(props) {
                 renderItem={({ item }) => (
                     <CardListHouses  
                         images={item.images}
-                        title={item.title}
+                        title={item.name}
                         description={item.description}
                         price={item.price}
                         rating={item.rating}
                         count={item.count}
                         navigation={navigation} // Pasa navigation como prop
-                        view={"HouseDetail"}
+                        view="HouseDetail"
                     />
                 )}
                 keyExtractor={(item) => item.id}

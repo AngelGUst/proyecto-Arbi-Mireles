@@ -14,11 +14,11 @@ export default function HouseDetail(props) {
     props.navigation.setOptions
     return (
         <View >
-            <PagerView>
+            <PagerView style={{height:256}}>
                 {map(images,(item) =>(
                     <View key={item}>
                         <Text>{item}</Text>
-                        <Image source={{ uri: item }} style={{width: "100%", height: "100%"}}/>
+                        <Image source={{ uri: item }} style={{width: "100%", height: 256}}/>
                     </View>
                 ))}
             </PagerView>
