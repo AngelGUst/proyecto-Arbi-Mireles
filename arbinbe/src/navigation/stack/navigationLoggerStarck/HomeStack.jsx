@@ -1,6 +1,7 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import Home from "../../../kernel/components/modules/home/screens/Home";
+import HouseDetail from "../../../kernel/components/modules/home/screens/HouseDetail";
 
 
 const Stack = createStackNavigator();
@@ -12,6 +13,11 @@ export default function HomeStack() {
                 name="LoginStack"
                 component={Home}
                 options={{ title: "Iniciar sesión" }}
+            />
+            <Stack.Screen
+                name="HouseDetail"
+                component={Home}
+                options={{ title: "HouseDetail" }}
             />
         </Stack.Navigator>
     );
