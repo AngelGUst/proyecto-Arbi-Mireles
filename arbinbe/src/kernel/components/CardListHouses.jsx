@@ -5,12 +5,12 @@ import { useNavigation } from '@react-navigation/native'; // Import useNavigatio
 import { count } from 'firebase/firestore';
 
 export default function CardListHouses(props) {
-    const { images, title, description, price, rating, view,count, } = props;
+    const { images, title, description, price, rating, view,count, address} = props;
     const navigation = useNavigation(); // Use the useNavigation hook
 
     return (
         <TouchableOpacity
-            onPress={() => navigation.navigate(view ? view : "", { images, title, description, price, rating,count, view, navigation})}
+            onPress={() => navigation.navigate(view ? view : "HouseDeail", { images, title, description, price, rating,count, view, navigation, address})}
         >
             <Card>
                 <View style={{ flexDirection: 'row' }}>

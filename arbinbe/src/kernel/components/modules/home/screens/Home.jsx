@@ -38,6 +38,7 @@ export default function Home(props) {
                         count={item.count}
                         navigation={navigation} // Pasa navigation como prop
                         view="HouseDetail"
+                        address ={item.address}
                     />
                 )}
                 keyExtractor={(item) => item.id}
